@@ -1,0 +1,233 @@
+$bg-primary: #F2F2F2;
+$bg-secondary: #FFFFFF;
+$color-green: #18C576;
+$color-yellow: #FFA726;
+$color-green-active: #18C57690;
+$container-width: 1200px;
+$global-padding-mobile: 16px;
+$global-padding-tablet: 120px;
+
+$tablet: 1024px;
+$desktop: 1440px;
+
+@mixin image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background-color: $bg-primary;
+}
+
+.container {
+    width: 100%;
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 0 $global-padding-mobile;
+
+    @media (min-width: $tablet) {
+        padding: 0 $global-padding-tablet;
+    }
+
+    @media (min-width: $desktop) {
+        max-width: calc($container-width + $global-padding-tablet*2);
+
+    }
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    background-color: $color-green;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: ease-out all .2s;
+
+    p {
+        color: white;
+    }
+
+    &:hover {
+        background-color: $color-green-active;
+    }
+}
+
+.button-rhomb {
+    font-weight: 500;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 120%;
+    padding: 8px 16px;
+
+    transform: skew(-20deg);
+
+    p,
+    svg {
+        transform: skew(20deg);
+    }
+
+    &:hover {
+        transform: skew(-25deg);
+    }
+}
+
+.chip_collection{
+    display: flex;
+    gap: 4px;
+
+    .chip{
+        color: white;
+        padding: 0 11px;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 23px;
+    }
+
+    .chip-green{
+        background-color: $color-green;
+    }
+
+    .chip-yellow{
+        background-color: $color-yellow;
+    }
+}
+
+.chip_collection-row{
+    flex-direction: row;
+}
+
+.chip_collection-col{
+    flex-direction: column;
+}
+
+// intro --------------------
+
+.intro {
+    height: 300px;
+    background-color: $bg-secondary;
+    display: flex;
+    align-items: center;
+
+    .intro_video_wrapper {
+        width: 100%;
+        height: 204px;
+        position: relative;
+        overflow: hidden;
+
+        &:has(.intro_video_button:hover) {
+            backdrop-filter: blur(5px);
+
+            .intro_video {
+                transform: scale(1.08) rotateZ(1deg) translateX(5px);
+            }
+
+            .intro_video_blurer {
+                opacity: 1;
+            }
+
+        }
+
+        .intro_video_blurer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            background-color: rgba($color: #000000, $alpha: .1);
+            backdrop-filter: blur(2px);
+            opacity: 0;
+            transition: all .4s;
+
+        }
+
+        .intro_video {
+            @include image;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transition: all .6s;
+
+            //transform: scale(1.08) rotateZ(1deg) translateX(5px);
+
+        }
+
+        .intro_video-viewer,
+        .intro_video_button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .intro_video_button {
+            z-index: 300;
+        }
+    }
+
+    @media (min-width: $tablet) {
+        height: 465px;
+
+        .intro_video_wrapper {
+            height: 337px;
+        }
+    }
+
+    @media (min-width: $desktop) {
+        height: 645px;
+
+        .intro_video_wrapper {
+            height: 517px;
+        }
+    }
+
+}
+
+// products ----------------------
+
+
+.products {
+    .products_collage {}
+
+    .products_collage_item {
+        @include image;
+        width: 100%;
+        height: 328px;
+
+        .products_collage_item-head{
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+            padding: 12px 12px 0 12px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .products_collage_item-first{
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .products_collage_item-title {
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 95%;
+                color: white;
+            }
+        }
+
+    }
+}
