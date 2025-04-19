@@ -1,6 +1,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 main {
@@ -10,11 +11,16 @@ main {
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1232px;
   margin: 0 auto;
   padding: 0 16px;
 }
 @media (min-width: 768px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+@media (min-width: 1024px) {
   .container {
     padding: 0 120px;
   }
@@ -58,7 +64,7 @@ main {
   padding-left: calc((100vw - 230px) / 2);
   padding-right: calc((100vw - 230px) / 2);
 }
-@media (min-width: 768px) {
+@media (min-width: 460px) {
   .slider .slider-track {
     padding: 0;
     scroll-snap-type: none;
@@ -73,7 +79,7 @@ main {
   justify-content: center;
   flex-shrink: 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 460px) {
   .slider .slider-track .slide {
     flex-shrink: 1;
     width: 100%;
@@ -90,7 +96,7 @@ main {
   justify-content: center;
   gap: 12px;
 }
-@media (min-width: 768px) {
+@media (min-width: 460px) {
   .slider .slider-dots {
     display: none;
   }
@@ -364,7 +370,7 @@ main {
   margin-left: -50vw;
   margin-right: -50vw;
 }
-@media (min-width: 768px) {
+@media (min-width: 460px) {
   .products .products_collage_container-slider {
     margin: 0;
     position: static;
@@ -381,6 +387,8 @@ main {
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  border-radius: 5px;
+  overflow: hidden;
 }
 .products .products_collage_item .products_collage_item-head {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
@@ -454,6 +462,7 @@ main {
 .products .products_collage_card {
   width: 100%;
   max-width: 230px;
+  min-width: 148px;
   height: 410px;
   border-radius: 6.25px;
   overflow: hidden;
@@ -499,7 +508,6 @@ main {
   }
 }
 .products .products_collage_card .products_collage_card-content .products_collage_card-submit {
-  margin-top: 33px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -507,7 +515,6 @@ main {
 }
 @media (min-width: 768px) {
   .products .products_collage_card .products_collage_card-content .products_collage_card-submit {
-    margin-top: 23px;
     gap: 8px;
   }
   .products .products_collage_card .products_collage_card-content .products_collage_card-submit .price {
@@ -520,9 +527,13 @@ main {
     padding-bottom: 12px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 460px) {
   .products .products_collage_card {
     max-width: 100% !important;
+  }
+}
+@media (min-width: 768px) {
+  .products .products_collage_card {
     height: 328px !important;
   }
 }/*# sourceMappingURL=styles.css.map */
