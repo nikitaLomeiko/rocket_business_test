@@ -10,6 +10,43 @@
 
 <body>
     <main>
+        <div class="modal" id="modal">
+            <div class="modal-overlay" id="modalOverlay"></div>
+            <div class="modal-content">
+                <button class="close-btn" id="closeModal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M15 5L5 15" stroke="#444444" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M5 5L15 15" stroke="#444444" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <h2 class="modal-title">Оставьте заявку</h2>
+                <form>
+                    <div class="form-fields">
+                        <div id="username-group" class="input-group">
+                            <input type="text" id="username" required />
+                            <label for="username">Ваше имя*</label>
+                            <p id="username-error" class="input-error">error message</p>
+                        </div>
+                        <div id="phone-group" class="input-group">
+                            <input type="text" id="phone" required />
+                            <label for="phone">Номер телефона*</label>
+                            <p id="phone-error" class="input-error">error message</p>
+                        </div>
+                    </div>
+                    <div class="form-submit">
+                        <label id="checkbox-label" class="checkbox-wrapper">
+                            <input id="checkbox" type="checkbox"/>
+                            <span class="custom-checkbox"></span>
+                            Я соглашаюсь на обработку персональных данных
+                        </label>
+                        <button id="form-submit" class="button button-base button-green">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
         <section class="intro">
             <div class="container">
                 <div class="intro_video_wrapper">
@@ -95,7 +132,7 @@
                         <div class="products_collage_item-foot">
                             <div class="products_collage_item-submit">
                                 <p class="price">570 ₽</p>
-                                <button class="button button-base button-green">Оставить заявку</button>
+                                <button class="button button-base button-green open-modal">Оставить заявку</button>
                             </div>
                         </div>
                     </div>
@@ -156,7 +193,7 @@
 
                                 <div class="products_collage_item-submit">
                                     <p class="price">570 ₽</p>
-                                    <button class="button button-base button-green">Оставить заявку</button>
+                                    <button class="button button-base button-green open-modal">Оставить заявку</button>
                                 </div>
                             </div>
                         </div>
@@ -213,7 +250,7 @@
 
                                 <div class="products_collage_item-submit">
                                     <p class="price">570 ₽</p>
-                                    <button class="button button-base button-green">Оставить заявку</button>
+                                    <button class="button button-base button-green open-modal">Оставить заявку</button>
                                 </div>
                             </div>
                         </div>
@@ -275,10 +312,12 @@
                                             </div>
                                         </div>
                                         <div class="products_collage_card-content">
-                                            <h3 class="products_collage_card-title">Попкорн солёный, для СВЧ-печи, 120 г</h3>
+                                            <h3 class="products_collage_card-title">Попкорн солёный, для СВЧ-печи, 120 г
+                                            </h3>
                                             <div class="products_collage_card-submit">
                                                 <p class="price price-large price-dark">160 ₽</p>
-                                                <button class="button button-base button-green">Оставить заявку</button>
+                                                <button class="button button-base button-green open-modal">Оставить
+                                                    заявку</button>
                                             </div>
                                         </div>
                                     </div>
@@ -337,7 +376,8 @@
                                             <h3 class="products_collage_card-title">Эскимо с малиной, 150 г</h3>
                                             <div class="products_collage_card-submit">
                                                 <p class="price price-large price-dark">190 ₽</p>
-                                                <button class="button button-base button-green">Оставить заявку</button>
+                                                <button class="button button-base button-green open-modal">Оставить
+                                                    заявку</button>
                                             </div>
                                         </div>
                                     </div>
@@ -346,7 +386,7 @@
                             <div class="slider-dots">
                                 <button class="button dot active" onclick="scrollToSlide(0)"></button>
                                 <button class="button dot" onclick="scrollToSlide(1)"></button>
-                              </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -355,7 +395,9 @@
     </main>
 </body>
 
+<script src="https://unpkg.com/imask"></script>
 <script src="slider.js"></script>
+<script src="modal.js"></script>
 <script src="script.js"></script>
 
 </html>
