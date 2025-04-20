@@ -10,6 +10,6 @@ buttonShowVideo.addEventListener("click", () => {
   setTimeout(() => {
     buttonShowVideo.style.display = "flex";
     frame.style.display = "none";
-    frame.src = 'https://www.youtube.com/embed/xvFZjo5PgG0?autoplay=1&mute=1&rel=0&controls=1&modestbranding=1&showinfo=0'
+    frame.src = 'https://www.youtube.com/embed/xvFZjo5PgG0?autoplay=1&mute=0&rel=0&controls=1&modestbranding=1&showinfo=0'
   }, 7000);
 });
