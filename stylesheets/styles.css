@@ -486,6 +486,9 @@ form .form-submit button {
   left: 0;
   transition: all 0.6s;
 }
+.intro .intro_video_wrapper .intro_video-viewer {
+  z-index: 300;
+}
 .intro .intro_video_wrapper .intro_video-viewer,
 .intro .intro_video_wrapper .intro_video_button {
   position: absolute;
