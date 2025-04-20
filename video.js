@@ -1,18 +1,18 @@
 function onYouTubeIframeAPIReady() {
-    const player = new YT.Player('frame', {
-      events: {
-        'onStateChange': onPlayerStateChange 
-      }
-    });
-  }
+  const player = new YT.Player("frame", {
+    events: {
+      onStateChange: onPlayerStateChange,
+    },
+  });
+}
 
-  function onPlayerStateChange(event) {
-    if (event.data === YT.PlayerState.ENDED) {
-      frame.style.display = 'none'
-      buttonShowVideo.style.display = 'flex'
-      frame.src = ''
-    }
+function onPlayerStateChange(event) {
+  if (event.data === YT.PlayerState.ENDED) {
+    frame.style.display = "none";
+    buttonShowVideo.style.display = "flex";
+    frame.src = "";
   }
+}
 
 const frame = document.getElementById("frame");
 const buttonShowVideo = document.getElementById("show-video");

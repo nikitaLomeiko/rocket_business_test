@@ -452,15 +452,17 @@ form .form-submit button {
   position: relative;
   overflow: hidden;
 }
-.intro .intro_video_wrapper:has(.intro_video_button:hover) {
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-}
-.intro .intro_video_wrapper:has(.intro_video_button:hover) .intro_video {
-  transform: scale(1.08) rotateZ(1deg) translateX(10px);
-}
-.intro .intro_video_wrapper:has(.intro_video_button:hover) .intro_video_blurer {
-  opacity: 1;
+@media (min-width: 600px) {
+  .intro .intro_video_wrapper:has(.intro_video_button:hover) {
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+  }
+  .intro .intro_video_wrapper:has(.intro_video_button:hover) .intro_video {
+    transform: scale(1.08) rotateZ(1deg) translateX(10px);
+  }
+  .intro .intro_video_wrapper:has(.intro_video_button:hover) .intro_video_blurer {
+    opacity: 1;
+  }
 }
 .intro .intro_video_wrapper .intro_video_blurer {
   position: absolute;
