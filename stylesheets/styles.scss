@@ -795,7 +795,7 @@ form {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            height: calc(328px - 181px);
+            height: calc(410px - 230px);
 
             .products_collage_card-title {
                 width: 100%;
@@ -828,6 +828,8 @@ form {
             @media (min-width: $tablet) {
                 padding-top: 14px;
                 padding-bottom: 12px;
+
+                height: calc(328px - 181px);
             }
         }
 

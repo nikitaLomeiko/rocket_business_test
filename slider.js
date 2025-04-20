@@ -14,7 +14,7 @@ track.addEventListener("scroll", () => {
   const slides = Array.from(track.children);
   const scrollLeft = track.scrollLeft;
   slides.forEach((slide, i) => {
-    if (scrollLeft >= slide.offsetLeft - slide.offsetWidth / 2) {
+    if (scrollLeft >= slide.offsetLeft - slide.offsetWidth) {
       index = i;
     }
   });

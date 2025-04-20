@@ -727,7 +727,7 @@ form .form-submit button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 147px;
+  height: 180px;
 }
 .products .products_collage_card .products_collage_card-content .products_collage_card-title {
   width: 100%;
@@ -760,6 +760,7 @@ form .form-submit button {
   .products .products_collage_card .products_collage_card-content {
     padding-top: 14px;
     padding-bottom: 12px;
+    height: 147px;
   }
 }
 @media (min-width: 460px) {
